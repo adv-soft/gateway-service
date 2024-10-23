@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "uG+A1/d5nnA=",
+  "dgSpecHash": "JUUemI1yymo=",
   "success": true,
   "projectFilePath": "/Users/timothyaxelwinarto/Fontys/sem6/individual/BE/ApiGateway/ApiGateway/ApiGateway.csproj",
   "expectedPackageFiles": [
@@ -22,10 +22,7 @@
     "/Users/timothyaxelwinarto/.nuget/packages/swashbuckle.aspnetcore.swagger/6.8.1/swashbuckle.aspnetcore.swagger.6.8.1.nupkg.sha512",
     "/Users/timothyaxelwinarto/.nuget/packages/swashbuckle.aspnetcore.swaggergen/6.8.1/swashbuckle.aspnetcore.swaggergen.6.8.1.nupkg.sha512",
     "/Users/timothyaxelwinarto/.nuget/packages/swashbuckle.aspnetcore.swaggerui/6.8.1/swashbuckle.aspnetcore.swaggerui.6.8.1.nupkg.sha512",
-    "/Users/timothyaxelwinarto/.nuget/packages/system.diagnostics.diagnosticsource/4.7.1/system.diagnostics.diagnosticsource.4.7.1.nupkg.sha512",
-    "/Users/timothyaxelwinarto/.nuget/packages/microsoft.netcore.app.ref/8.0.10/microsoft.netcore.app.ref.8.0.10.nupkg.sha512",
-    "/Users/timothyaxelwinarto/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.10/microsoft.aspnetcore.app.ref.8.0.10.nupkg.sha512",
-    "/Users/timothyaxelwinarto/.nuget/packages/microsoft.netcore.app.host.osx-arm64/8.0.10/microsoft.netcore.app.host.osx-arm64.8.0.10.nupkg.sha512"
+    "/Users/timothyaxelwinarto/.nuget/packages/system.diagnostics.diagnosticsource/4.7.1/system.diagnostics.diagnosticsource.4.7.1.nupkg.sha512"
   ],
   "logs": []
 }
