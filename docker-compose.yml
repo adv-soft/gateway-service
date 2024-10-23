@@ -3,7 +3,7 @@
 services:
   auth-service:
     container_name: auth-service
-    image: timothyaxelll/auth-service:v3
+    image: timothyaxelll/authservice:v3
     build:
       dockerfile: Dockerfile
     environment:
@@ -22,3 +22,7 @@ services:
       - "8002:8080"
     networks:
       - studenthousing
+
+networks:
+  studenthousing:
+    driver: bridge
