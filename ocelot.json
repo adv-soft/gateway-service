@@ -4,38 +4,38 @@
     {
       "UpstreamPathTemplate": "/auth/register",
       "UpstreamHttpMethod": [ "Post" ],
-      "DownstreamPathTemplate": "/auth/register",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
+          "Host": "auth-service",
           "Port": 8080
         }
-      ]
+      ],
+      "DownstreamPathTemplate": "/auth/register"
     },
     {
       "UpstreamPathTemplate": "/auth/login",
       "UpstreamHttpMethod": [ "Post" ],
-      "DownstreamPathTemplate": "/auth/login",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
+          "Host": "auth-service",
           "Port": 8080
         }
-      ]
+      ],
+      "DownstreamPathTemplate": "/auth/login"
     },
     {
       "UpstreamPathTemplate": "/auth/refresh-token",
       "UpstreamHttpMethod": [ "Post" ],
-      "DownstreamPathTemplate": "/auth/refresh-token",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
+          "Host": "auth-service",
           "Port": 8080
         }
-      ]
+      ],
+      "DownstreamPathTemplate": "/auth/refresh-token"
     }
   ],
   "GlobalConfiguration": {
