@@ -3,8 +3,10 @@
 services:
   auth-service:
     container_name: auth-service
+    
     image: timothyaxelll/authservice:v3
     build:
+      context: .
       dockerfile: Dockerfile
     environment:
       - ConnectionStrings__AuthDbConnection="Host=studenthousing-1678.jxf.gcp-europe-west1.cockroachlabs.cloud;Database=AuthDb;Username=timothyaxell;Password=Hbz-pgWXVPjUGPIU3HDGVA;Port=26257;SslMode=VerifyFull"
@@ -17,6 +19,7 @@ services:
     container_name: api-gateway
     image: timothyaxelll/apigateway:v1
     build:
+      context: .
       dockerfile: Dockerfile
     ports:
       - "8002:8080"
