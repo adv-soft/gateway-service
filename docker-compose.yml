@@ -9,7 +9,7 @@ services:
       context: .
       dockerfile: Dockerfile
     environment:
-      - ConnectionStrings__AuthDbConnection="Host=studenthousing-1678.jxf.gcp-europe-west1.cockroachlabs.cloud;Database=AuthDb;Username=timothyaxell;Password=Hbz-pgWXVPjUGPIU3HDGVA;Port=26257;SslMode=VerifyFull"
+      - ConnectionStrings__AuthDbConnection=Host=studenthousing-1678.jxf.gcp-europe-west1.cockroachlabs.cloud;Database=AuthDb;Username=timothyaxell;Password=Hbz-pgWXVPjUGPIU3HDGVA;Port=26257;SslMode=VerifyFull
     ports:
       - "8001:8080"
     networks:
