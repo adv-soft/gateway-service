@@ -51,7 +51,7 @@ jobs:
           docker push ${{ secrets.DOCKER_USERNAME }}/apigateway:v1
 
       - name: Pull latest images
-        run: docker-compose -f . pull
+        run: docker-compose -f ./docker-compose.yml pull
 
       - name: Deploy with Docker Compose
-        run: docker-compose -f . up -d
+        run: docker-compose -f ./docker-compose.yml up -d
