@@ -41,3 +41,8 @@ jobs:
           echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
           docker push ${{ secrets.DOCKER_USERNAME }}/apigateway:v1
 
+      - name: Pull latest images
+        run: docker-compose -f docker-compose.yml pull
+
+      - name: Deploy with Docker Compose
+        run: docker-compose -f docker-compose.yml up -d

@@ -1,19 +1,24 @@
-﻿#version: '3.8'
-#
-#services:
-#  auth-service:
-#    image: auth-service:latest
-#    build:
-#      context: .
-#      dockerfile: Dockerfile
-#    ports:
-#      - "8080:8080"
-#    environment:
-#      - ASPNETCORE_ENVIRONMENT=Development
-#      - ConnectionStrings__AuthDbConnection="Host=studenthousing-1678.jxf.gcp-europe-west1.cockroachlabs.cloud;Database=AuthDb;Username=timothyaxell;Password=Hbz-pgWXVPjUGPIU3HDGVA;Port=26257;SslMode=VerifyFull"
-#    networks:
-#      - backend-network
-#
-#networks:
-#  backend-network:
-#    driver: bridge
+﻿version: '3.8'
+
+services:
+  auth-service:
+    container_name: auth-service
+    image: timothyaxelll/auth-service:v3
+    build:
+      dockerfile: Dockerfile
+    environment:
+      - ConnectionStrings__AuthDbConnection="Host=studenthousing-1678.jxf.gcp-europe-west1.cockroachlabs.cloud;Database=AuthDb;Username=timothyaxell;Password=Hbz-pgWXVPjUGPIU3HDGVA;Port=26257;SslMode=VerifyFull"
+    ports:
+      - "8001:8080"
+    networks:
+      - studenthousing
+
+  api-gateway:
+    container_name: api-gateway
+    image: timothyaxelll/apigateway:v1
+    build:
+      dockerfile: Dockerfile
+    ports:
+      - "8002:8080"
+    networks:
+      - studenthousing
