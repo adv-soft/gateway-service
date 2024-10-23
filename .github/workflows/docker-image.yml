@@ -24,3 +24,20 @@ jobs:
 
       - name: Build
         run: dotnet build --configuration Release
+        
+    # Deploy 
+    Deploy:
+      runs-on: ubuntu-latest
+      needs: build
+      steps:
+        - name: Checkout code
+          uses: actions/checkout@v4
+
+        - name: Build and Push User Service Docker image
+          env:
+            APP_UID: 1000
+          run: |
+            docker build -t ${{ secrets.DOCKER_USERNAME }}/apigateway:v1 . 
+            echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
+            docker push ${{ secrets.DOCKER_USERNAME }}/apigateway:v1
+
